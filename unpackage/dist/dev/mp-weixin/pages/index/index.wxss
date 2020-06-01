@@ -1,0 +1,16 @@
+
+.content.data-v-86a0e536{
+	/* margin-top:80rpx; */
+	/* padding-bottom:140rpx; */
+}
+/* 编辑时候点击mask部分也可以确认 */
+.mask-table.data-v-86a0e536{
+	width: 100%;
+	z-index: 0;
+	position: fixed;
+	bottom:100rpx;
+	left:0;
+	background-color: $mask-color;
+}
+
+

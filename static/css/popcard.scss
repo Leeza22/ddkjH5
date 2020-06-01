@@ -1,0 +1,203 @@
+
+// $maxcolumn-h: 360rpx; //每列选项最大高度
+// $z-popcard: 1000;
+
+.form-item{
+	height: 64rpx;
+	padding:0 20rpx;
+	box-sizing: border-box;
+	position: relative;
+	margin-bottom: 20rpx;
+}
+// .total-length{
+// 	position: absolute;
+// 	box-sizing: border-box;
+// 	background-color: #fff;
+// 	border-radius: 8rpx;
+// 	color:#bbb;
+// 	top:2rpx;right:22rpx;
+// 	font-size: 24rpx;
+// 	height: 48rpx;
+// 	padding:0 10rpx;
+// 	text-align: center;
+// 	line-height: 48rpx;
+// 	z-index: 1;
+// 	top:0;bottom:0;
+// 	margin-top:auto;
+// 	margin-bottom:auto;
+// }
+
+/* 输入框 */
+.table-item-item .d_input{
+	padding:0;
+	box-sizing: border-box;
+	flex: 1;
+	overflow: hidden;
+}
+.form-item .d-input{
+	text-align: center;
+	border:1rpx solid rgba(0,0,0,.1);
+	border-radius: 10rpx;
+	height:60rpx;
+	line-height: 60rpx;
+	color: #ccc;
+	position: relative;
+	box-sizing: border-box;
+}
+.icon-down{
+	position: absolute;
+	right:20rpx;
+	top:0;bottom:0;
+	margin-top:auto;
+	margin-bottom:auto;
+}
+// .uni-input-placeholder,.show-placeholder{
+// 	color:#ccc;
+// 	font-size:28rpx;
+// 	line-height:64rpx;
+// }
+
+/* 选项卡 */  /*表格选项卡*/
+.pop-card{
+	width: 750rpx;
+	height: 500rpx;
+	box-shadow: 0 0 4rpx 4rpx #eee;
+	background-color: #fff;
+	position: fixed;
+	bottom:0;left:0;
+	z-index:1000;	
+}
+/* 取消确认 */
+
+.handle{
+	width: 100%;
+	display: flex;
+	justify-content:space-between;
+	padding:4rpx 30rpx;	
+	box-sizing: border-box;
+	
+	font-size: 30rpx;
+	color:#666;
+	
+}
+/* 选项列 */
+.scroll-row{
+	width: 100%;
+	padding:0 30rpx;
+	box-sizing: border-box;
+}
+.column-card{	
+	display: flex;
+	flex-wrap: nowrap;
+	flex:1;
+}
+.scroll-column{
+	max-height: 360rpx;
+}
+/*选项元素*/ 
+.column-item{
+	font-size: 30rpx;
+	color:#666;
+	padding:8rpx 0;
+	display: flex;
+	align-items: center;
+}
+.item-text{
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.icon-arrow{
+	margin-left:4rpx;
+}
+/* 选框样式 */
+.check-tab-box{
+	height: 100%;
+	padding:0 10rpx;
+}
+.check-tab{
+	width: 24rpx;
+	height: 24rpx;
+	border:1rpx solid #ccc;
+	border-radius: 4rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.checked-tab{
+	border-color: #2298EF;
+	background-color: #2298EF;
+}
+.checked-box .item-text{
+	color:#2298EF;
+}
+.check-tab-radio{
+	border-radius: 50%;
+}
+/* 选中项展示卡 */
+.checked-scroll{
+	width: 100%;
+	padding:4rpx 30rpx;
+	box-sizing: border-box;
+}
+
+.checked-item{
+	flex-shrink: 0;
+	border-radius: 8rpx;
+	margin-right:10rpx;
+}
+.clear{
+	margin-left:4rpx;
+}
+.checked-show-box{
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+/* 上面选中级联 */
+.checked-top{
+	width: 100%;
+	box-sizing: border-box;
+	border:1rpx solid #eee;
+	border-radius:8rpx;
+	/* 流出选项总数位置 不遮挡选项点击删除 */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+}
+.total-length{
+	color:#bbb;
+	font-size: 24rpx;
+	padding:0 4rpx;
+}
+.checked-scroll-top{
+	padding-left:10rpx;
+	max-width:440rpx;
+	flex:1;
+}
+
+.remove-item{
+	flex-shrink: 0;
+	margin-right:16rpx;
+	border-radius: 8rpx;
+	display: flex;
+	align-items: center;
+}
+.check-tab-parent{
+	border-color: #2298EF;
+	background-color: #2298EF;
+}
+//选中颜色
+// .checked-color{
+// 	color: #2298EF;
+// }
+//当前父元素加粗
+.check-color-active{
+	color:#555;
+	font-weight: 700;
+}
+.icon-halfcheck{
+	color:#fff;
+}

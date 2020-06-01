@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/office/office",
+    "pages/index/checkTable/checkTable",
+    "pages/index/screen/screen",
+    "pages/login/login",
+    "pages/office/my/my",
+    "pages/upload/upload",
+    "pages/upload/fileUpload",
+    "pages/index/webSite/webSite",
+    "pages/Test/input"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false,
+    "style": {
+      "backgroundColor": "#fff",
+      "app-plus": {
+        "titleNView": false,
+        "scrollIndicator": "none",
+        "backgroundColor": "#fff",
+        "softinputMode": "adjustPan"
+      }
+    }
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap74.json"
+}

@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/*全局css 样式*/
+/* 表格高度64rpx 32px    字体30rpx  字体颜色#666666 边框颜色#c7c7c7*/
+/* pc主题色 #5F96C5     目前#2298ef*/
+/* 颜色变量 */
+/* 边框颜色 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 表格高度 */
+/*form input高度*/
+/* 背景颜色 */
+/*层级*/
+/* 尺寸变量 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+/* 自定义 */
+/*自定义按钮*/
+.d-btn.data-v-f38e34d2 {
+  padding: 4rpx 24rpx;
+  border-radius: 8rpx;
+}
+.d-btn-default.data-v-f38e34d2 {
+  background-color: #fff;
+  color: #666;
+  border: 1rpx solid #ccc;
+}
+.d-btn-primary.data-v-f38e34d2 {
+  background-color: #2298ef;
+  color: #fff;
+  background-color: #2298ef;
+}
+.full-width.data-v-f38e34d2 {
+  width: 100%;
+}
+/*表格元素*/
+.table-item-style.data-v-f38e34d2 {
+  padding: 0 6rpx;
+  box-sizing: border-box;
+}
+.table-item-content.data-v-f38e34d2 {
+  min-height: 64rpx;
+  /*与后台协商的padding 不能改*/
+  padding: 0 6rpx;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 30rpx;
+  color: #666;
+  line-height: 1.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  word-break: break-all;
+  overflow: hidden;
+  /*居右*/
+  /*配合.show-list */
+  /*居左*/
+  /*居中*/
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.table-item-content-index.data-v-f38e34d2 {
+  height: 64rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/*单选 多选 卡片位置*/
+.show-list.data-v-f38e34d2 {
+  /*居中*/
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  /*居右*/
+  /*居左*/
+  /*卡片中文字居中*/
+  text-align: center;
+}
+/*表格文本对齐*/
+/*表格默认高度 没有内容撑高元素*/
+/*文字超出部分隐藏*/
+.checked-color.data-v-f38e34d2 {
+  color: #2298ef;
+}
+.uni-input-placeholder.data-v-f38e34d2, .show-placeholder.data-v-f38e34d2 {
+  color: #ccc;
+  font-size: 28rpx;
+  line-height: 64rpx;
+}
+.position-relative.data-v-f38e34d2 {
+  position: relative;
+}
+.input-box.data-v-f38e34d2 {
+  line-height: 64rpx;
+  height: 64rpx;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.icon-arrow.data-v-f38e34d2 {
+  padding: 0 4px;
+}
+.d_select.data-v-f38e34d2::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: solid 6px #FFFFFF;
+  border-right: solid 6px transparent;
+  border-left: solid 6px transparent;
+  left: 50%;
+  top: -6px;
+  margin-left: -6px;
+}
+.d_select.data-v-f38e34d2 {
+  position: absolute;
+  top: 32px;
+  padding: 0 10rpx;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: #DDDDDD 2px 2px 8px, #DDDDDD -2px -2px 8px;
+  z-index: 888;
+}
+.d_select-scroll.data-v-f38e34d2 {
+  max-width: 200px;
+  max-height: 200px;
+  overflow: auto;
+  color: #666;
+  white-space: nowrap;
+}
+.d_select-item.data-v-f38e34d2, .d_select-empty.data-v-f38e34d2 {
+  line-height: 30px;
+  font-size: 30rpx;
+  text-align: center;
+  border-bottom: solid 1px #DDDDDD;
+  padding: 0px 4px;
+}
+

@@ -1,0 +1,132 @@
+{
+    "name" : "ddkjapp",
+    "appid" : "__UNI__3597A07",
+    "description" : "",
+    "versionName" : "1.0.0", //必填，推荐使用.分割，如1.0  
+    "versionCode" : "100", //必填，纯数字  
+    "transformPx" : false,
+    //"launch_path": "入口页面",      //必填  "launch_path": "http://192.168.50.30:8080/WebTrader/m_login.html",/应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头/
+    //"description": "应用描述信息",  //可选  
+    //"icons": {                     //可选，以分辨率为索引键名  
+    //	"72": "图标路径"  
+    //},  
+    "developer" : {
+        //选填，开发者信息  
+        "name" : "leeza",
+        "email" : "开发者邮箱",
+        "url" : "开发者网站"
+    },
+    "screenOrientation" : [
+        //应用支持的屏幕方向  
+        "portrait-primary" //竖屏  
+    ],
+    // "portrait-secondary", //竖屏（反向），上下颠倒  
+    // "landscape-primary",  //横屏，Home键在右侧  
+    // "landscape-secondary" //横屏（反向），Home键在左侧  
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "usingComponents" : true,
+        "nvueCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        "statusbar" : {
+            "immersed" : false
+        },
+        /* 模块配置 */
+        "modules" : {},
+        /* 应用发布信息 */
+        "distribute" : {
+            /* android打包配置 */
+            "android" : {
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ]
+            },
+            /* ios打包配置 */
+            "ios" : {},
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "ad" : {}
+            },
+            "icons" : {
+                "android" : {
+                    "xhdpi" : "static/images/lOGO.png"
+                }
+            }
+        }
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : false
+        },
+        "usingComponents" : true
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    },
+    "h5" : {
+        "title" : "ddkjh5",
+        "router" : {
+            "mode" : "hash",
+            "base" : ""
+        },
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : ""
+                }
+            }
+        },
+        "devServer" : {
+            "https" : false,
+            "port" : 8080, //端口号
+            "disableHostCheck" : true,
+            "proxy" : {
+                "/sys" : {
+                    "target" : "http://101.200.86.127:8080", //目标接口域名
+
+                    // "target" : "http://192.168.1.203:8080", //目标接口域名
+                    "changeOrigin" : true, //是否跨域
+                    "secure" : false // 设置支持https协议的代理
+                }
+            }
+        },
+        "domain" : "b.cjding.com"
+    }
+}

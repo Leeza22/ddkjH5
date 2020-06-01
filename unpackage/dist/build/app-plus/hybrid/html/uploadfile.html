@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>文件上传</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			/* background-color: #fff;	 */
+			position: relative;
+			z-index: 1;	
+			color:#666;
+		}
+		.upload-box{
+			width: 60%;
+			margin:0 auto;
+			background-color: #fff;
+		}
+		.head-btn{
+			text-align: center;
+			margin-top: 10px;
+			width: 100%;
+		}
+		.file {
+			position: relative;
+			display: inline-block;
+			background: #D0EEFF;
+			border: 1px solid #99D3F5;
+			border-radius: 4px;
+			padding: 4px 10px;
+			overflow: hidden;
+			color: #1E88C7;
+			text-decoration: none;
+			text-indent: 0;
+			line-height: 20px;
+			font-size: 14px;
+		}
+		.file input {
+			position: absolute;
+			right: 0;
+			top: 0;
+			opacity: 0;
+		}
+		.file:hover {
+			background: #AADFFD;
+			border-color: #78C3F3;
+			color: #004974;
+			text-decoration: none;
+		}
+		.determine{
+			color: #FFFFFF;
+			background-color: #2298EF;
+			display: inline-block;
+			font-size: 20px;
+			border-radius: 5px;
+			padding: 8px 24px;
+		}
+		.showFileName{
+			height: 32px;
+			max-width: 300px;
+			width: 100%;
+			white-space: nowrap;
+			padding:0 20px;
+			box-sizing: border-box;
+			/* overflow-x:auto; */
+			overflow: hidden;
+			text-overflow: ellipsis;	
+		}
+		.btn {
+			display: block;
+			margin: 0 auto 10px;
+			background-color: #2298EF;
+			border: 0;
+			color: #ffffff;
+			height: 32px;
+			width: 200px;
+			line-height: 32px;
+			border-radius: 5px;
+		}
+		.btn1 {
+			display: block;
+			margin: 10px auto;
+			background-color: #2298EF;
+			border: 0;
+			color: #ffffff;
+			height: 32px;
+			width: 200px;
+			line-height: 32px;
+			border-radius: 5px;
+			
+		}
+		
+		.btn-red {
+			background-color: #dd524d;
+		}
+		
+		.btn-yellow {
+			background-color: #fff;
+		}
+		
+		.desc {
+			padding: 10px;
+			color: #999999;
+		}	
+	</style>
+	<script src="https://cdn.bootcss.com/jquery/3.5.0/jquery.min.js"></script>
+</head>
+<body>
+	<div class="upload-box">
+		<div class="head-btn">
+			<form action="" method="post">
+				<a href="javascript:;" class="file">选择文件
+					<input type="file" name="uploadFile" id="uploadFile" >
+				</a>			
+			</form>
+			<p class="showFileName"></p>
+		</div>
+		<div>
+			<button class="btn" type="button" data-action="redirectTo">确定</button>
+			<button class="btn1" type="button" data-action="navigateBack">取消上传</button>
+		</div>
+	</div>	
+	<script type="text/javascript" src="https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.2.js"></script>
+	
+<!-- 	 <script>
+		 console.log(1)
+		 // 调用安卓
+		       document.querySelector('.file').addEventListener('click',function () {
+		                 var REQUESTCODE = 1;
+		                 var main = plus.android.runtimeMainActivity();
+		                 var Intent = plus.android.importClass('android.content.Intent');
+		                 var intent = new Intent(Intent.ACTION_GET_CONTENT);
+		 
+		                 intent.setType("*/*");//设置类型，任意类型
+		                 //intent.setType("image/*");
+		                 //intent.setType("audio/*"); //选择音频
+		                 //intent.setType("video/*"); //选择视频 （mp4 3gp 是android支持的视频格式）
+		 
+		                 intent.addCategory(Intent.CATEGORY_OPENABLE);
+		                 main.startActivityForResult(intent,REQUESTCODE);
+		 
+		                 main.onActivityResult = function(requestCode, resultCode, data) { 
+		                     if (REQUESTCODE == requestCode) {
+		                         var context = main;
+		                         plus.android.importClass(data);
+		                         // 获得文件路径
+		                         var fileData = data.getData();  
+		                         var path = plus.android.invoke(fileData, "getPath");
+		                         console.log("path:"+path);
+		 
+		                         // 判断文件类型
+		                         var resolver = context.getContentResolver();
+		                         var fileType = plus.android.invoke(resolver, "getType",fileData);
+		                         console.log("fileType:"+fileType);
+		                     }
+		                 }
+		             })
+	 </script> -->
+  
+	<script type="text/javascript" src='./js/uploadfile.js'></script>
+</body>
+</html>

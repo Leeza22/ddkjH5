@@ -1,0 +1,9 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "form-item": "/components/form/formItem",
+    "uni-icons": "/components/unis/uni-icons/uni-icons",
+    "status-bar": "/components/unis/uni-status-bar/uni-status-bar",
+    "search": "/components/form/Wenben"
+  }
+}

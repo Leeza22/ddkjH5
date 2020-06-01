@@ -1,0 +1,16 @@
+
+.uni-status-bar.data-v-79a2c9b7 {
+		width: 750rpx;
+		height: 20px;
+		background-color: #fff;
+		/* height: var(--status-bar-height);
+ */
+}
+.top_view.data-v-79a2c9b7{
+		width:100%;
+		background-color: #fff;
+		top:0;
+		position: fixed;
+		z-index: 999;
+}
+

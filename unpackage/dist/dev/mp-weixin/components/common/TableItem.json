@@ -1,0 +1,16 @@
+{
+  "component": true,
+  "usingComponents": {
+    "dan-xuan": "/components/common/Ddanxuan",
+    "duo-xuan": "/components/common/Dduoxuan",
+    "date-time": "/components/common/Ddatetime",
+    "yin-yong": "/components/common/Dyinyong",
+    "yuan-gongs": "/components/common/Dyuangongs",
+    "yuan-gong": "/components/common/Dyuangong",
+    "bu-men": "/components/common/Dbumen",
+    "bu-mens": "/components/common/Dbumens",
+    "cascade": "/components/common/Dcascade",
+    "upload-file": "/components/common/DuploadFile",
+    "wen-ben": "/components/common/Dwenben"
+  }
+}

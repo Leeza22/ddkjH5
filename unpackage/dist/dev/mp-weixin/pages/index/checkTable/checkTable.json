@@ -1,0 +1,10 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "table-detail": "/components/index/TableDetail",
+    "table": "/components/common/Table",
+    "status-bar": "/components/unis/uni-status-bar/uni-status-bar"
+  }
+}

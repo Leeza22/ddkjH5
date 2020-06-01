@@ -1,0 +1,143 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages	
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle":"custom",
+				"navigationBarBackgroundColor":"#FFFFFF",
+				"navigationBarTextStyle":"black",
+				"enablePullDownRefresh":true,
+				"app-plus":{
+					"titleNView":false,
+					"scrollIndicator":"none"
+				}
+			}
+		},
+		{
+			"path" : "pages/office/office",
+			"style" : {
+				"navigationStyle":"custom",
+				"enablePullDownRefresh":false
+			}
+		},
+        {
+            "path" : "pages/index/checkTable/checkTable",
+            "style" : {
+				"navigationStyle":"custom",
+				"navigationBarBackgroundColor":"#FFFFFF",
+				"enablePullDownRefresh":false
+			}
+        },
+        {
+            "path" : "pages/index/screen/screen",
+            "style" : {
+				"navigationStyle":"custom"
+			}
+        },
+		{
+			"path" : "pages/login/login",
+			"style" : {
+				"navigationStyle":"custom"
+			}
+		},	
+        {
+            "path" : "pages/office/my/my",
+            "style" : {
+				"navigationStyle":"custom",
+				"navigationBarBackgroundColor":"#FFFFFF",
+				"enablePullDownRefresh":false
+			}
+        }
+        ,{
+            "path" : "pages/index/webSite/webSite",
+            "style" : {
+				"navigationStyle":"custom",
+				"app-plus":{
+					"titleNView":false,
+					"scrollIndicator":"none",
+					"backgroundColor":"F5F7FA"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/office/schedule/schedule",
+            "style" : {
+				"navigationStyle":"custom",
+					"app-plus":{
+						"titleNView":false,
+						"scrollIndicator":"none",
+						"backgroundColor":"F5F7FA"
+					}				
+			}
+        }
+        ,{
+            "path" : "pages/index/upload/upload",
+            "style" : {}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"navigationBarTextStyle":"black",
+		"enablePullDownRefresh":false,
+		"style":{	
+			"backgroundColor": "#fff",
+			"app-plus":{
+				"titleNView":false,
+				"scrollIndicator":"none",
+				"backgroundColor":"#fff",
+				"softinputMode":"adjustPan"
+			}
+		}
+		
+	},
+	// "tabBar":{
+	// 	"color": "#7A7E83",
+	// 	"selectedColor": "#2298EF",
+	// 	"borderStyle": "black",
+	// 	"backgroundColor": "#fff",
+	// 	"list": [
+	// 		{
+	// 			"pagePath": "pages/index/index",
+	// 			"iconPath": "static/images/schedule.png",
+	// 			"selectedIconPath": "static/images/schedule1.png",
+	// 			"text": "日程"
+	// 		},
+	// 		{
+	// 			"pagePath": "pages/message/message",
+	// 			"iconPath": "static/images/message.png",
+	// 			"selectedIconPath": "static/images/message1.png",
+	// 			"text": "消息"
+	// 		},
+	// 		{
+	// 			"pagePath": "pages/custom/custom",
+	// 			"iconPath": "static/images/custom.png",
+	// 			"selectedIconPath": "static/images/custom1.png",
+	// 			"text": "客户"
+	// 		},
+	// 		{
+	// 			"pagePath": "pages/product/product",
+	// 			"iconPath": "static/images/product.png",
+	// 			"selectedIconPath": "static/images/product1.png",
+	// 			"text": "产品"
+	// 		},
+	// 		{
+	// 			"pagePath": "pages/office/office",
+	// 			"iconPath": "static/images/office.png",
+	// 			"selectedIconPath": "static/images/office1.png",
+	// 			"text": "办公"
+	// 		}
+			
+	// 	]
+	// },
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}

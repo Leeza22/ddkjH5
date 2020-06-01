@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "duoxuan": "/components/form/Checkbox",
+    "riqishijian": "/components/form/Datetime",
+    "jilian": "/components/form/Jilian",
+    "wenben": "/components/form/Wenben",
+    "number": "/components/form/Number",
+    "panduan": "/components/form/Panduan",
+    "yuangong": "/components/form/Yuangong",
+    "bumen": "/components/form/Bumen",
+    "button": "/components/form/Buttons"
+  }
+}

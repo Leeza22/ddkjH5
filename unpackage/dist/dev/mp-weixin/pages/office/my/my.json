@@ -1,0 +1,9 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-icons": "/components/unis/uni-icons/uni-icons",
+    "uni-popup": "/components/unis/uni-popup/uni-popup"
+  }
+}

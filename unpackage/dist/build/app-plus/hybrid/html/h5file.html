@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<title>H5附件上传</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				/* background-color: #fff;	 */
+				position: relative;
+				z-index: 1;	
+				color:#666;
+			}
+			.upload-box{
+				width: 60%;
+				margin:0 auto;
+				background-color: #fff;
+			}
+			.head-btn{
+				text-align: center;
+				margin-top: 10px;
+				width: 100%;
+			}
+			.file {
+				position: relative;
+				display: inline-block;
+				background: #D0EEFF;
+				border: 1px solid #99D3F5;
+				border-radius: 4px;
+				padding: 4px 10px;
+				overflow: hidden;
+				color: #1E88C7;
+				text-decoration: none;
+				text-indent: 0;
+				line-height: 20px;
+				font-size: 14px;
+			}
+			.file input {
+				position: absolute;
+				right: 0;
+				top: 0;
+				opacity: 0;
+			}
+			.file:hover {
+				background: #AADFFD;
+				border-color: #78C3F3;
+				color: #004974;
+				text-decoration: none;
+			}
+			.determine{
+				color: #FFFFFF;
+				background-color: #2298EF;
+				display: inline-block;
+				font-size: 20px;
+				border-radius: 5px;
+				padding: 8px 24px;
+			}
+			.showFileName{
+				height: 32px;
+				max-width: 300px;
+				width: 100%;
+				white-space: nowrap;
+				padding:0 20px;
+				box-sizing: border-box;
+				/* overflow-x:auto; */
+				overflow: hidden;
+				text-overflow: ellipsis;	
+			}
+			.btn {
+				display: block;
+				margin: 0 auto 10px;
+				background-color: #2298EF;
+				border: 0;
+				color: #ffffff;
+				height: 32px;
+				width: 200px;
+				line-height: 32px;
+				border-radius: 5px;
+			}
+			.btn1 {
+				display: block;
+				margin: 10px auto;
+				background-color: #2298EF;
+				border: 0;
+				color: #ffffff;
+				height: 32px;
+				width: 200px;
+				line-height: 32px;
+				border-radius: 5px;
+				
+			}
+			
+			.btn-red {
+				background-color: #dd524d;
+			}
+			
+			.btn-yellow {
+				background-color: #fff;
+			}
+			
+			.desc {
+				padding: 10px;
+				color: #999999;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>H5附件上传</h1>
+	<!-- 	<input type="file" id="myfile" name="myfile" style="display:none" onchange="changeAgentContent()" />
+		<p id="myfileAgent" class="show-file"></p> -->
+		<!-- <input type="text" value="" disabled id="myfileAgent" class="show-file" /> -->
+		<!-- <input type="button" onclick="document.getElementById('myfile').click()" value="浏览..." /> -->
+		<!-- <input type="file" id="myfile" value="" name="myfile" multiple="multiple" /> -->
+		<!-- <button id="uploader">上传</button> -->
+		
+		
+		<div class="head-btn">
+			<button class="test">test</button>
+			<form action="" method="post">
+				<a href="javascript:;" class="file">选择文件
+					<input type="file" name="uploadFile" id="uploadFile" >
+				</a>			
+			</form>
+			<p class="showFileName"></p>
+		</div>
+		<div>
+			<button class="btn" type="button" data-action="redirectTo">确定</button>
+			<button class="btn1" type="button" data-action="navigateBack">取消上传</button>
+		</div>
+		<!-- uni 的 SDK -->
+		<script type="text/javascript" src="https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.1.js"></script>
+		<script type="text/javascript" src="js/h5uploader.js"></script>
+		<script src="https://cdn.bootcss.com/jquery/3.5.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			// 当前环境
+			uni.getEnv(function(res) {
+				console.log('当前环境：' + JSON.stringify(res));
+			});
+			function changeAgentContent(){
+			    document.getElementById("myfileAgent").innerHTML = document.getElementById("myfile").value;
+			}
+			var uploader = document.getElementById('uploader');
+			// 发送文件数据
+			function sendMessage(data) {
+				uni.postMessage({
+					data: {
+						action: data
+					}
+				});
+				// 关闭所有页面，打开到应用内的某个页面,url传递文件数据,表单页面通过reload接收数据,并在提交时传递
+				// uni.reLaunch({
+				// 	url: './h5Upload?fileData=' + data,
+				// })
+				// 关闭当前页面，跳转到应用内的某个页面
+				uni.redirectTo({
+					url: './h5Upload?fileData=' + data,
+				})
+				// 返回上一级页面,通过@message接收数据,并放到store中,以便提交时获取文件数据
+				// uni.navigateBack({
+				//     delta: 1
+				// });
+			}
+			
+			
+			
+			$(".file").on("change", "input[type='file']", function() {
+				let filePath = $(this).val();
+				// console.log(filePath);
+				localStorage.setItem("fileAddress", filePath);
+				let lastname = localStorage.getItem("fileAddress");
+				if (lastname != "") {
+					$(".showFileName").html(lastname);
+				} else {
+					$(".showFileName").html("");
+				}			
+			});
+			
+			$('.btn').click(function(evt) {
+				var formdata = new FormData(); // 创建一个form类型的数据
+				formdata.append("files",$("#uploadFile")[0].files[0]); // 获取上传文件的数据
+				formdata.append("operate","UpLoadFile"); // 获取上传文件的数据
+				formdata.append("name","name"); // 获取上传文件的数据
+				$.ajax({
+					url: 'http://47.97.163.146:8080/Controler.ashx',
+					type: "POST",
+					processData: false,
+					contentType: false,
+					data:formdata,
+					success: function(data) {
+						// debugger
+						console.log("这是请求成功的");
+						console.log(data);
+						sendMessage(data)
+					},
+					error: function(err) {
+						console.log(err)
+						console.log("这是请求失败的");
+						sendMessage("woshi")	
+					}
+				});
+			
+				var target = evt.target;
+				if (target.tagName === 'BUTTON') {
+					var action = target.getAttribute('data-action');
+					if (action == 'redirectTo') {
+						console.log(2);
+						this.sendMessage("woshi")
+						// uni.redirectTo({
+						// 	/* url: '/pages/component/index', */
+						// 	url: '/pages/index/index',
+						// 	success:function (d) {
+						// 		console.log("跳转成功");
+						// 	},
+						// 	fail:function(e){
+						// 		console.log(e);
+						// 	},
+						// });
+					}
+				}
+			});
+			
+			//取消文件上传
+			$('.btn1').click(function(evt) {
+				var target = evt.target;
+				if (target.tagName === 'BUTTON') {
+					var action = target.getAttribute('data-action');
+					if (action == 'navigateBack') {
+						uni.navigateBack({
+							delta: 1
+						});
+					}
+				}
+			});
+			// uploader.addEventListener("click", function(e) {
+				
+			
+			// 	H5Uploader.upload({
+			// 		// 上传url
+			// 		action: 'http://101.200.86.127:8080/upload/oss',
+			// 		id: 'myfile',
+			// 		size: {
+			// 			max: 50000, // 5000kb 
+			// 			valide: function(e) {
+			// 				if (e) {
+			// 					alert("The size of " + e.name + " is exceed max value!");
+			// 				}
+			// 			}
+			// 		}, // MB
+			// 		// type: {
+			// 		// 	name: 'csv;png;jpg;jpeg',
+			// 		// 	valide: function(e) {
+			// 		// 		if (e) {
+			// 		// 			alert("The type of " + e.name + " is not supported!");
+			// 		// 		}
+			// 		// 	}
+			// 		// },
+			// 		progress: function() {
+			// 			var p = document.createElement('p');
+			// 			p.innerHTML = "uploading";
+			// 			p.id = "loading";
+			// 			document.body.appendChild(p);
+			// 		},
+			// 		success: function(data) {
+			// 			alert(data);
+			// 			if (data && data == 200) {
+			// 				document.getElementById('loading').innerHTML = "The file upload successfully!";
+			// 				alert("The file upload successfully.");
+			// 			}
+			// 			// 上传完成,发送文件数据到应用中
+			// 			sendMessage(data)
+			// 		},
+			// 		fail: function(data) {
+			// 		}
+			// 	});
+			// }, false);
+		</script>
+	</body>
+
+</html>

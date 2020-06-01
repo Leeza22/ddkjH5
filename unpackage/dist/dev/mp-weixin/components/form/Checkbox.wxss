@@ -1,0 +1,40 @@
+
+.btn.data-v-e1727fec{
+	-webkit-flex-shrink: 0;
+	        flex-shrink: 0;
+	height:60rpx;
+	line-height:60rpx;
+	font-size:28rpx;
+	color:#666;
+	margin:0 20rpx 20rpx 0;
+	border: 1rpx solid #e7e7e7;
+	border-radius:10rpx;	
+	padding:0 16rpx;
+}
+.blank-item.data-v-e1727fec{
+	display: inline-block;
+	margin:0 20rpx 20rpx 20rpx;
+	padding:4rpx 20rpx;
+	font-size:26rpx;
+	color:#bbb;
+	box-sizing: border-box;
+	background-color: #f8f8f8;
+	border-radius: 8rpx;
+}
+.group.data-v-e1727fec{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	        justify-content: flex-start;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	padding:0 20rpx;
+}
+.checked-class.data-v-e1727fec{
+	color:#fff;
+	background-color: rgba(34,152,239,1);
+}
+
+

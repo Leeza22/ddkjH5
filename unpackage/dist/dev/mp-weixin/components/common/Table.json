@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "top-bar": "/components/index/TopBar",
+    "table-item": "/components/common/TableItem",
+    "pagination": "/components/common/Pagination",
+    "uni-popup": "/components/unis/uni-popup/uni-popup"
+  }
+}

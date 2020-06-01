@@ -1,0 +1,6 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "uni-icons": "/components/unis/uni-icons/uni-icons"
+  }
+}

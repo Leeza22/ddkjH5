@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "tab-bar": "/components/index/TabBar",
+    "uni-section": "/components/unis/uni-section/uni-section"
+  }
+}

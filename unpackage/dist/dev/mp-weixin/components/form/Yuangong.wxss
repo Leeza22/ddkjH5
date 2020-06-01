@@ -1,0 +1,241 @@
+
+/* $maxcolumn-h: 360rpx; //每列选项最大高度 */
+/* $z-popcard: 1000; */
+.form-item.data-v-637af131{
+	height: 64rpx;
+	padding:0 20rpx;
+	box-sizing: border-box;
+	position: relative;
+	margin-bottom: 20rpx;
+}
+/* .total-length{ */
+/* 	position: absolute; */
+/* 	box-sizing: border-box; */
+/* 	background-color: #fff; */
+/* 	border-radius: 8rpx; */
+/* 	color:#bbb; */
+/* 	top:2rpx;right:22rpx; */
+/* 	font-size: 24rpx; */
+/* 	height: 48rpx; */
+/* 	padding:0 10rpx; */
+/* 	text-align: center; */
+/* 	line-height: 48rpx; */
+/* 	z-index: 1; */
+/* 	top:0;bottom:0; */
+/* 	margin-top:auto; */
+/* 	margin-bottom:auto; */
+/* } */
+/* 输入框 */
+.table-item-item .d_input.data-v-637af131{
+	padding:0;
+	box-sizing: border-box;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	overflow: hidden;
+}
+.form-item .d-input.data-v-637af131{
+	text-align: center;
+	border:1rpx solid rgba(0,0,0,.1);
+	border-radius: 10rpx;
+	height:60rpx;
+	line-height: 60rpx;
+	color: #ccc;
+	position: relative;
+	box-sizing: border-box;
+}
+.icon-down.data-v-637af131{
+	position: absolute;
+	right:20rpx;
+	top:0;bottom:0;
+	margin-top:auto;
+	margin-bottom:auto;
+}
+/* .uni-input-placeholder,.show-placeholder{ */
+/* 	color:#ccc; */
+/* 	font-size:28rpx; */
+/* 	line-height:64rpx; */
+/* } */
+/* 选项卡 */
+/*表格选项卡*/
+.pop-card.data-v-637af131{
+	width: 750rpx;
+	height: 500rpx;
+	box-shadow: 0 0 4rpx 4rpx #eee;
+	background-color: #fff;
+	position: fixed;
+	bottom:0;left:0;
+	z-index:1000;
+}
+/* 取消确认 */
+.handle.data-v-637af131{
+	width: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack:justify;
+	-webkit-justify-content:space-between;
+	        justify-content:space-between;
+	padding:4rpx 30rpx;	
+	box-sizing: border-box;
+	
+	font-size: 30rpx;
+	color:#666;
+}
+/* 选项列 */
+.scroll-row.data-v-637af131{
+	width: 100%;
+	padding:0 30rpx;
+	box-sizing: border-box;
+}
+.column-card.data-v-637af131{	
+	display: -webkit-box;	
+	display: -webkit-flex;	
+	display: flex;
+	-webkit-flex-wrap: nowrap;
+	        flex-wrap: nowrap;
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	        flex:1;
+}
+.scroll-column.data-v-637af131{
+	max-height: 360rpx;
+}
+/*选项元素*/
+.column-item.data-v-637af131{
+	font-size: 30rpx;
+	color:#666;
+	padding:8rpx 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.item-text.data-v-637af131{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.icon-arrow.data-v-637af131{
+	margin-left:4rpx;
+}
+/* 选框样式 */
+.check-tab-box.data-v-637af131{
+	height: 100%;
+	padding:0 10rpx;
+}
+.check-tab.data-v-637af131{
+	width: 24rpx;
+	height: 24rpx;
+	border:1rpx solid #ccc;
+	border-radius: 4rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+.checked-tab.data-v-637af131{
+	border-color: #2298EF;
+	background-color: #2298EF;
+}
+.checked-box .item-text.data-v-637af131{
+	color:#2298EF;
+}
+.check-tab-radio.data-v-637af131{
+	border-radius: 50%;
+}
+/* 选中项展示卡 */
+.checked-scroll.data-v-637af131{
+	width: 100%;
+	padding:4rpx 30rpx;
+	box-sizing: border-box;
+}
+.checked-item.data-v-637af131{
+	-webkit-flex-shrink: 0;
+	        flex-shrink: 0;
+	border-radius: 8rpx;
+	margin-right:10rpx;
+}
+.clear.data-v-637af131{
+	margin-left:4rpx;
+}
+.checked-show-box.data-v-637af131{
+	width: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+/* 上面选中级联 */
+.checked-top.data-v-637af131{
+	width: 100%;
+	box-sizing: border-box;
+	border:1rpx solid #eee;
+	border-radius:8rpx;
+	/* 流出选项总数位置 不遮挡选项点击删除 */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	overflow: hidden;
+}
+.total-length.data-v-637af131{
+	color:#bbb;
+	font-size: 24rpx;
+	padding:0 4rpx;
+}
+.checked-scroll-top.data-v-637af131{
+	padding-left:10rpx;
+	max-width:440rpx;
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	        flex:1;
+}
+.remove-item.data-v-637af131{
+	-webkit-flex-shrink: 0;
+	        flex-shrink: 0;
+	margin-right:16rpx;
+	border-radius: 8rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.check-tab-parent.data-v-637af131{
+	border-color: #2298EF;
+	background-color: #2298EF;
+}
+/*选中颜色 */
+/* .checked-color{ */
+/* 	color: #2298EF; */
+/* } */
+/*当前父元素加粗 */
+.check-color-active.data-v-637af131{
+	color:#555;
+	font-weight: 700;
+}
+.icon-halfcheck.data-v-637af131{
+	color:#fff;
+}	
+
